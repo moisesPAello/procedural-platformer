@@ -34,6 +34,8 @@ public class Game1 : Game
         _spriteBatch = new SpriteBatch(GraphicsDevice);
 
         // TODO: use this.Content to load your game content here
+
+        _personaje.Textura = Content.Load<Texture2D>("target");
     }
 
     protected override void Update(GameTime gameTime)
@@ -43,6 +45,8 @@ public class Game1 : Game
 
         // TODO: Add your update logic here
 
+        _movimiento.Mover(_personaje, gameTime);
+
         base.Update(gameTime);
     }
 
@@ -51,6 +55,10 @@ public class Game1 : Game
         GraphicsDevice.Clear(Color.CornflowerBlue);
 
         // TODO: Add your drawing code here
+
+        _spriteBatch.Begin();
+        _personaje.Dibujar(_spriteBatch);
+        _spriteBatch.End();
 
         base.Draw(gameTime);
     }
