@@ -1,9 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using Entidades;
 
-namespace PersonajeEjemplo
+namespace Fisicas
 {
-    public class claseMovimiento
+    public class Movimiento
     {
         public void Mover(Personaje personaje, GameTime gameTime)
         {
